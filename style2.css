@@ -1,0 +1,304 @@
+@keyframes button-hover {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1f1c2c, #928dab, #305454);
+    color: #fff;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.main-title {
+    margin-top: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background-image: url('P1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.button:hover {
+    animation: button-hover 0.3s ease-in-out forwards;
+    background: linear-gradient(135deg, #0083b0, #00b4db);
+}
+
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+}
+
+.button i {
+    margin-right: 8px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 25px;
+}
+
+header {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+.hamburger-menu:hover .dropdown {
+    display: block;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-height: 400px;
+    margin: 20px 0;
+}
+
+.button-container .button {
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    scroll-behavior: smooth;
+}
+
+.info-card {
+    flex: 0 0 90%;
+    max-width: 400px;
+    height: 300px;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    scroll-snap-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+.info-card p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    opacity: 1;
+    background-color: gray;
+}
+
+.button-container.programming {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px; /* Para hindi masyadong lumayo ang huling button */
+    margin: 0 auto; /* Center sa container */
+}
+
+.small-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    min-width: 130px; /* Fixed width para pantay ang laki */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.small-button i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.small-button:hover {
+    background: linear-gradient(135deg, #0083b0, #00b4db);
+    transform: scale(1.05);
+}
+.footer {
+    text-align: center;
+}

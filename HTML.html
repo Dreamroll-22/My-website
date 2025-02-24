@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC1 - Install and Configure Computer Systems and Hardware</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="header-title">ICT'S Future Career Hub</h1>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="dropdown">
+                <a href="Index.html">Home</a>
+                <a href="#about">About Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h1 class="coc-title">Hyper Text Markup Language (HTML)</h1>
+
+<h1>Introduction to HTML</h1>
+<p>HTML (HyperText Markup Language) is the foundation of web development. It structures content using tags.</p>
+
+<hr>
+
+<h2>Lesson 1: Basic Structure of an HTML Document</h2>
+<p>An HTML document follows a standard format:</p>
+
+<pre>
+<div class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="This is an example webpage"&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;!DOCTYPE html&gt;</code> → Declares the document as HTML5.</li>
+    <li><code>&lt;html lang="en"&gt;</code> → Defines the language of the page.</li>
+    <li><code>&lt;head&gt;</code> → Contains metadata (title, description, encoding).</li>
+    <li><code>&lt;meta charset="UTF-8"&gt;</code> → Supports all characters (e.g., emoji 😊).</li>
+    <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> → Makes the page responsive.</li>
+    <li><code>&lt;title&gt;</code> → The title seen in the browser tab.</li>
+    <li><code>&lt;body&gt;</code> → Contains the visible content of the webpage.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 2: Headings and Paragraphs</h2>
+<p>HTML provides six levels of headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>) and paragraph elements.</p>
+
+<pre>
+<div class="code-box">  
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph with some text.&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> → Headings, with <code>&lt;h1&gt;</code> being the largest.</li>
+    <li><code>&lt;p&gt;</code> → Defines a paragraph.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 3: Links and Images</h2>
+<p>HTML supports hyperlinks (<code>&lt;a&gt;</code>) and images (<code>&lt;img&gt;</code>).</p>
+
+<pre>
+  <div class="code-box">
+&lt;a href="https://www.google.com" target="_blank"&gt;Visit Google&lt;/a&gt;
+&lt;img src="image.jpg" alt="Sample Image" width="300"&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;a href="URL" target="_blank"&gt;</code> → Creates a clickable link that opens in a new tab.</li>
+    <li><code>&lt;img src="URL" alt="description" width="300"&gt;</code> → Displays an image.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 4: Lists (Ordered & Unordered)</h2>
+<p>HTML supports ordered and unordered lists.</p>
+
+<pre>
+  <div class="code-box">
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;First Item&lt;/li&gt;
+    &lt;li&gt;Second Item&lt;/li&gt;
+&lt;/ol&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;ul&gt;</code> → Unordered list (bullets).</li>
+    <li><code>&lt;ol&gt;</code> → Ordered list (numbers).</li>
+    <li><code>&lt;li&gt;</code> → List item.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 5: Tables</h2>
+<p>HTML tables organize data in rows and columns.</p>
+
+<pre>
+  <div class="code-box">
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt; 
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;table&gt;</code> → Creates a table.</li>
+    <li><code>&lt;tr&gt;</code> → Table row.</li>
+    <li><code>&lt;th&gt;</code> → Table header (bold).</li>
+    <li><code>&lt;td&gt;</code> → Table data (cell content).</li>
+</ul>
+<hr>
+
+<h2>Lesson 6: Forms (User Input Fields)</h2>
+<p>Forms allow user input.</p>
+
+<pre>
+  <div class="code-box">
+&lt;form action="submit.php" method="POST"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;form&gt;</code> → Creates a form.</li>
+    <li><code>action="submit.php"</code> → Specifies where data is sent.</li>
+    <li><code>method="POST"</code> → Data is sent securely.</li>
+    <li><code>&lt;input type="text" required&gt;</code> → Requires user input.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 7: Semantic HTML</h2>
+<p>Semantic elements improve accessibility and SEO.</p>
+
+<pre>
+  <div class="code-box">
+&lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+&lt;/header&gt;
+&lt;nav&gt;
+    &lt;a href="home.html"&gt;Home&lt;/a&gt;
+    &lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;/nav&gt;
+&lt;section&gt;
+    &lt;h2&gt;About Us&lt;/h2&gt;
+    &lt;p&gt;Information about the company.&lt;/p&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+    &lt;p&gt;Copyright &amp;copy; 2025&lt;/p&gt;
+&lt;/footer&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;header&gt;</code> → Represents the top section.</li>
+    <li><code>&lt;nav&gt;</code> → Navigation links.</li>
+    <li><code>&lt;section&gt;</code> → Groups content.</li>
+    <li><code>&lt;footer&gt;</code> → Bottom section.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 8: Embedding Videos and Audios</h2>
+<p>HTML5 supports media files.</p>
+
+<pre>
+  <div class="code-box">
+&lt;video width="400" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;video&gt;</code> → Embeds a video.</li>
+    <li><code>&lt;audio&gt;</code> → Embeds an audio file.</li>
+    <li><code>&lt;source&gt;</code> → Defines the file format.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 9: Iframes (Embedding Webpages)</h2>
+<p>Iframes allow embedding another webpage inside a webpage.</p>
+
+<pre>
+  <div class="code-box">
+&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;iframe&gt;</code> → Embeds an external page.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 10: Progress Bars and Meters</h2>
+<p>HTML provides elements for visual indicators.</p>
+
+<pre>
+  <div class="code-box">
+&lt;progress value="70" max="100"&gt;&lt;/progress&gt;
+&lt;meter value="3" min="0" max="5"&gt;&lt;/meter&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;progress&gt;</code> → Shows a progress bar.</li>
+    <li><code>&lt;meter&gt;</code> → Displays a value within a range.</li>
+</ul>
+<hr>
+
+<h2>Lesson 11: SVG and Canvas (Graphics in HTML5)</h2>
+<p>HTML5 allows drawing graphics using SVG and Canvas.</p>
+
+<pre>
+  <div class="code-box">
+&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+&lt;/svg&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;svg&gt;</code> → Scalable vector graphics.</li>
+    <li><code>&lt;circle&gt;</code> → Draws a circle.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 12: HTML Entities (Special Characters)</h2>
+<p>Special characters require encoding.</p>
+
+<pre>
+  <div class="code-box">
+&lt;p&gt;Copyright &amp;copy; 2025&lt;/p&gt;
+&lt;p&gt;Use &amp;lt; and &amp;gt; for &lt; and &gt; symbols.&lt;/p&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&amp;copy;</code> → Copyright symbol.</li>
+    <li><code>&amp;lt;</code> → < symbol.</li>
+    <li><code>&amp;gt;</code> → > symbol.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 13: HTML Comments</h2>
+<p>Comments help document code.</p>
+
+<pre>
+  <div class="code-box">
+&lt;!-- This is a comment --&gt;
+&lt;p&gt;Visible content&lt;/p&gt;
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>&lt;!-- comment --&gt;</code> → Invisible note in code.</li>
+</ul>
+
+<hr>
+
+<h2>Final Notes</h2>
+<ul>
+    <li>HTML structures web pages.</li>
+    <li>Use CSS for styling.</li>
+    <li>se JavaScript for interactivity.</li>
+</ul>
+
+
+<a href="Index.html" class="button">Back to Homepage</a>
+
+</body>
+</html>

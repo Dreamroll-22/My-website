@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC2 - Setup computer Networks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="header-title">ICT'S Future Career Hub</h1>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="dropdown">
+                <a href="Index.html">Home</a>
+                <a href="#about">About Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h1 class="coc-title">COC2: Setup Computer Networks</h1>
+<h1>Creating Ethernet Cable</h1>
+<h2>Steps to Create a Straight-Through Cable</h2>
+<ol>
+    <li><strong>Prepare Tools and Materials:</strong>
+        <ul>
+            <li>Twisted-pair cable (CAT5e or CAT6)</li>
+            <li>RJ45 connectors</li>
+            <li>Crimping tool</li>
+            <li>Cable stripper or cutter</li>
+            <li>LAN tester</li>
+        </ul>
+    </li>
+    <li><strong>Measure and Cut the Cable</strong> – Cut the required length of twisted-pair cable using a cable cutter.</li>
+    <li><strong>Strip the Outer Jacket</strong> – Remove about 1 inch of the cable’s outer sheath to expose the twisted wire pairs.</li>
+    <li><strong>Untwist and Arrange the Wires</strong> – Carefully untwist the wire pairs and arrange them based on the wiring standard:
+        <ul>
+            <li><strong>T568A Standard</strong></li>
+            <li><strong>T568B Standard</strong></li>
+        </ul>
+        Ensure both ends follow the same standard for a straight-through cable.
+    </li>
+    <li><strong>Trim and Insert Wires into RJ45 Connector</strong> – Trim the wires evenly and insert them into the RJ45 connector in the correct order. Make sure each wire reaches the end of the connector.</li>
+    <li><strong>Crimp the Connector</strong> – Use the crimping tool to firmly secure the RJ45 connector to the cable.</li>
+    <li><strong>Repeat for the Other End</strong> – Follow the same steps to prepare and crimp the second end of the cable.</li>
+    <li><strong>Test the Cable</strong> – Use a LAN tester to check for proper wiring and connectivity. Ensure all connections are correctly aligned and functional.</li>
+</ol>
+<h1>Network Configuration</h1>
+
+<p>Both client and server computers must do this. The server must do it first before the client.</p>
+
+<h2>Change Computer Name</h2>
+<ol>
+    <li>Right-click <strong>THIS PC</strong> > click <strong>Properties</strong>.</li>
+    <li>Click <strong>Change Setting</strong> > click <strong>Change</strong>.</li>
+    <li>Click <strong>Computer name</strong> > type the Computer name (Ex. <em>Computer1</em> or <em>Server1</em>).</li>
+    <li>Click <strong>WORKGROUP</strong> > type the WORKGROUP (Ex. <em>WORKGROUP</em>) > click <strong>OK</strong> > click <strong>OK</strong> > click <strong>Restart</strong>.</li>
+</ol>
+
+<h2>IP Configuration</h2>
+<ol>
+    <li>Click <strong>Control Panel</strong> > Select <strong>Network and Internet</strong>.</li>
+    <li>Click <strong>Network and Sharing Center</strong>.</li>
+    <li>Click <strong>Change Adapter Settings</strong>.</li>
+    <li>Select <strong>Ethernet</strong> or <strong>Local Area Connection</strong> > Right-click <strong>Properties</strong>.</li>
+    <li>Click <strong>Internet Protocol Version 4 (TCP/IPv4)</strong>.</li>
+    <li>Use the following IP Address:
+        <ul>
+            <li>IP Address: (Ex. <em>192.168.1.2</em>)</li>
+            <li>Subnet Mask: (Ex. <em>255.255.255.0</em>)</li>
+            <li>Default Gateway: Type the Default Gateway of your router (Ex. <em>192.168.1.1</em>)</li>
+            <li>Preferred DNS Server: (Ex. <em>192.168.1.1</em>)</li>
+        </ul>
+    </li>
+    <li>Click <strong>OK</strong> > click <strong>OK</strong>.</li>
+</ol>
+
+<h3>⚠️ Warning ⚠️</h3>
+<p>The IP address of your server and client must be different from each other.</p>
+
+<h2>Turning Off Windows Firewall</h2>
+<ol>
+    <li>Click <strong>Control Panel</strong> > click <strong>System and Security</strong>.</li>
+    <li>Click <strong>Windows Defender Firewall</strong>.</li>
+    <li>Click <strong>Turn Windows Defender Firewall on or off</strong>.</li>
+    <li>Select <strong>Turn Windows Defender Firewall OFF</strong> > click <strong>OK</strong>.</li>
+</ol>
+
+<h2>Turning On Network Discovery and Turning Off Password Protected Sharing</h2>
+<ol>
+    <li>Click <strong>Control Panel</strong> > click <strong>Network and Internet</strong>.</li>
+    <li>Click <strong>Network and Sharing Center</strong>.</li>
+    <li>Click <strong>Change Advanced Sharing Settings</strong>.</li>
+    <li>Click <strong>Turn on Network Discovery</strong>.</li>
+    <li>Click <strong>Turn off Password Protected Sharing</strong> > click <strong>Save Changes</strong>.</li>
+</ol>
+
+<h2>Router Configuration</h2>
+<ol>
+    <li>In the Desktop, right-click <strong>Network and Sharing Center</strong> > click <strong>Properties</strong>.</li>
+    <li>Click <strong>Change Adapter Settings</strong>.</li>
+    <li>Select <strong>Ethernet</strong> > right-click <strong>Properties</strong>.</li>
+    <li>Click <strong>Internet Protocol Version 4 (TCP/IPv4)</strong>.</li>
+    <li>Click <strong>Obtain an IP address automatically</strong> > click <strong>OK</strong> > click <strong>OK</strong>.</li>
+    <li>Double-click <strong>Ethernet</strong> > check <strong>IPv4 Default Gateway</strong>.</li>
+    <li>Open <strong>Google Chrome</strong> or <strong>Internet Explorer</strong> > type the <strong>Default Gateway</strong> in the address bar.</li>
+    <li>Enter the router <strong>Username</strong> and <strong>Password</strong> (if unknown, check the back of the router).</li>
+    <li>Click <strong>Wireless</strong> > go to <strong>Basic Settings</strong> > click <strong>Wireless Network Name</strong> and type your preferred network name (Ex. <em>Computer_Router1</em>) > click <strong>Save</strong>.</li>
+    <li>Click <strong>Wireless Security</strong> > click <strong>Wireless Password</strong> and type your preferred password (Ex. <em>Admin123</em>) > click <strong>Save</strong>.</li>
+</ol>
+
+<h2>WiFi Access</h2>
+<ol>
+    <li>In the Desktop, right-click <strong>Network and Sharing Center</strong> > click <strong>Properties</strong>.</li>
+    <li>Click <strong>Change Adapter Settings</strong>.</li>
+    <li>Select <strong>Ethernet</strong> > right-click <strong>Properties</strong>.</li>
+    <li>Click <strong>Internet Protocol Version 4 (TCP/IPv4)</strong>.</li>
+    <li>Click <strong>Obtain an IP address automatically</strong> > click <strong>OK</strong> > click <strong>OK</strong>.</li>
+    <li>Open <strong>Google Chrome</strong> or <strong>Internet Explorer</strong>.</li>
+    <li>Type what you want to search (Ex. <em>What is Computer?</em>).</li>
+</ol>
+
+<h2>Wireless Printing</h2>
+<h3>Required:</h3>
+<ul>
+    <li>USB Dongle</li>
+    <li>Installer for dongle (CD or Flash Drive)</li>
+</ul>
+
+<ol>
+    <li>Plug the <strong>USB dongle</strong> and <strong>Installer</strong> into the computer.</li>
+    <li>Click <strong>This PC</strong> > open the installer (CD or Flash Drive) > install the software.</li>
+    <li>On the Desktop, right-click <strong>Network and Sharing Center</strong> > click <strong>Properties</strong>.</li>
+    <li>Click <strong>Change Adapter Settings</strong>.</li>
+    <li>Right-click <strong>Wi-Fi</strong> > click <strong>Connect</strong>.</li>
+    <li>Select the Wi-Fi network you want to connect to (Ex. <em>Router 1</em>) > click <strong>Connect</strong> > type the password.</li>
+    <li>Double-click <strong>Network and Sharing Center</strong> > find the computer name connected to the printer (Ex. <em>Admin1</em>) > double-click the computer name.</li>
+    <li>Double-click the <strong>Printer Installer</strong> on the networked computer > install the printer driver.</li>
+    <li>To print a file:
+        <ul>
+            <li>Select the file (docs, pdf, jpg, etc.) you want to print.</li>
+            <li>Right-click the file > click <strong>Print</strong> > click <strong>Print</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<div class="button-container center-buttons">
+    <a href="Index.html" class="button">Back to Homepage</a>
+     <a href="COC1.html" class="button">COC1 </a>
+    <a href="COC3.html" class="button">COC3 </a>
+</div>
+
+</body>
+</html>

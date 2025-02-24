@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC1 - JavaScript Full Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="header-title">ICT'S Future Career Hub</h1>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="dropdown">
+                <a href="Index.html">Home</a>
+                <a href="#about">About Us</a>
+                <a href="Index.html" href="#coc-section">CSS</a>
+                <a href="#prog-section">Programming</a>
+                <a href="#career-section">Careers</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h1 class="coc-title">JavaScript (JS)</h1>
+
+<h1>Introduction to JavaScript</h1>
+<p>JavaScript is a powerful programming language that makes web pages interactive. 
+It allows developers to add animations, pop-ups, handle user actions, and dynamically update content.</p>
+
+<hr>
+<h2>Lesson 1: How to Use JavaScript in HTML</h2>
+<p>There are three ways to add JavaScript to an HTML page:</p>
+<ul>
+    <li><strong>Inline JavaScript</strong> - Code is written directly inside an HTML tag.</li>
+    <li><strong>Internal JavaScript</strong> - Code is written inside a &lt;script&gt; tag within an HTML file.</li>
+    <li><strong>External JavaScript</strong> - Code is written in a separate .js file and linked to HTML.</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Inline JavaScript --&gt;
+&lt;button onclick="alert('Hello!')"&gt;Click Me&lt;/button&gt;
+
+&lt;!-- Internal JavaScript --&gt;
+&lt;script&gt;
+    function sayHello() {
+        alert("Hello!");
+    }
+&lt;/script&gt;
+
+&lt;!-- External JavaScript --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 2: Variables and Data Types</h2>
+<p>Variables are used to store values. JavaScript has three types of variable declarations:</p>
+<ul>
+    <li><code>var</code> - Older way of declaring variables (not recommended).</li>
+    <li><code>let</code> - Modern and recommended way of declaring variables.</li>
+    <li><code>const</code> - Used for values that should not change.</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+let name = "John";  // String
+const age = 25;     // Number
+var isStudent = true; // Boolean
+
+console.log(name);  // Outputs: John
+console.log(age);   // Outputs: 25
+console.log(isStudent); // Outputs: true
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 3: Output Methods in JavaScript</h2>
+<p>JavaScript can display output in different ways:</p>
+<ul>
+    <li><code>alert()</code> - Shows a popup message.</li>
+    <li><code>console.log()</code> - Displays output in the browser console.</li>
+    <li><code>document.write()</code> - Inserts text into the HTML document.</li>
+    <li><code>innerHTML</code> - Changes an element’s content.</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+alert("Hello, world!");
+console.log("This is a message in the console.");
+document.write("This is inserted into the page.");
+document.getElementById("demo").innerHTML = "New Content!";
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 4: Operators in JavaScript</h2>
+<p>JavaScript supports different types of operators:</p>
+<table border="1">
+<tr><th>Type</th><th>Example</th><th>Description</th></tr>
+<tr><td>Arithmetic</td><td>+ - * / %</td><td>Basic math operations</td></tr>
+<tr><td>Comparison</td><td>== === != > <</td><td>Compares values</td></tr>
+<tr><td>Logical</td><td>&& || !</td><td>Combines conditions</td></tr>
+</table>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+let num1 = 10;
+let num2 = 5;
+
+console.log(num1 + num2); // 15
+console.log(num1 > num2); // true
+console.log(num1 === "10"); // false (strict comparison)
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 5: Functions in JavaScript</h2>
+<p>Functions allow you to reuse code. There are two types:</p>
+<ul>
+    <li><strong>Regular Functions</strong> - Traditional function syntax.</li>
+    <li><strong>Arrow Functions</strong> - A shorter and modern way of writing functions.</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+// Regular Function
+function greet(name) {
+    return "Hello, " + name;
+}
+
+// Arrow Function
+const greetArrow = (name) => `Hello, ${name}`;
+
+console.log(greet("Alice"));
+console.log(greetArrow("Bob"));
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 6: Loops in JavaScript</h2>
+<p>Loops allow you to repeat a block of code multiple times.</p>
+<ul>
+    <li><strong>For Loop</strong> - Runs a fixed number of times.</li>
+    <li><strong>While Loop</strong> - Runs while a condition is true.</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+// For Loop
+for (let i = 1; i <= 5; i++) {
+    console.log("Number " + i);
+}
+
+// While Loop
+let count = 1;
+while (count <= 3) {
+    console.log("Count: " + count);
+    count++;
+}
+</div>
+</pre>
+
+<hr>
+<h2>Lesson 7: Basic DOM Manipulation</h2>
+<p>JavaScript can change HTML elements using the <strong>DOM (Document Object Model)</strong>.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Change text inside an element --&gt;
+document.getElementById("demo").innerHTML = "Updated Content";
+
+&lt;!-- Change style of an element --&gt;
+document.getElementById("demo").style.color = "red";
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 8: Events and Event Listeners</h2>
+<p>JavaScript responds to <strong>user actions</strong> using events.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Event Listener Example --&gt;
+document.getElementById("btn").addEventListener("click", function() {
+    alert("Button Clicked!");
+});
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 9: Asynchronous JavaScript</h2>
+<p>JavaScript can run tasks in the background without stopping the main page.</p>
+<ul>
+    <li><strong>setTimeout()</strong> - Runs code after a delay.</li>
+    <li><strong>setInterval()</strong> - Repeats code after a set interval.</li>
+    <li><strong>Promises</strong> - Handles asynchronous tasks.</li>
+    <li><strong>Async/Await</strong> - A cleaner way to handle Promises.</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Async Function Example --&gt;
+async function fetchData() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    let data = await response.json();
+    console.log(data);
+}
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 10: Object-Oriented Programming (OOP)</h2>
+<p>JavaScript supports <strong>OOP</strong> using <strong>Classes & Objects</strong>.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- JavaScript Class Example --&gt;
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    greet() {
+        return `Hello, my name is ${this.name}.`;
+    }
+}
+
+let john = new Person("John", 25);
+console.log(john.greet());
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 11: JavaScript Modules & Imports</h2>
+<p>Modules allow JavaScript code to be <strong>reusable and organized</strong>.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Export Function from Module (module.js) --&gt;
+export function sayHello() {
+    return "Hello World!";
+}
+
+&lt;!-- Import in another file --&gt;
+import { sayHello } from "./module.js";
+console.log(sayHello());
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 12: JavaScript Best Practices</h2>
+<ul>
+    <li>Use <code>const</code> and <code>let</code> instead of <code>var</code>.</li>
+    <li>Keep functions small and reusable.</li>
+    <li>Write <strong>clean and readable</strong> code.</li>
+    <li>Comment your code for clarity.</li>
+</ul>
+
+<hr>
+<h2>Lesson 13: JavaScript Error Handling</h2>
+<p>JavaScript allows you to handle errors gracefully using <strong>try, catch, finally,</strong> and <strong>throw</strong>.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Try-Catch Example --&gt;
+try {
+    let result = 10 / 0; 
+    console.log(result);
+} catch (error) {
+    console.log("An error occurred: " + error.message);
+} finally {
+    console.log("This always runs.");
+}
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 14: JavaScript Regular Expressions (Regex)</h2>
+<p>Regular Expressions (Regex) allow you to search and manipulate text efficiently.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Regex Example --&gt;
+let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+console.log(pattern.test("test@example.com")); // true
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 15: JavaScript Fetch API & AJAX</h2>
+<p>The <strong>Fetch API</strong> allows JavaScript to request data from an API asynchronously.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Fetch API Example --&gt;
+fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("Error:", error));
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 16: JavaScript Local Storage & Session Storage</h2>
+<p>Web Storage API allows you to store data on the user's browser.</p>
+
+<ul>
+    <li><strong>localStorage</strong> - Stores data permanently.</li>
+    <li><strong>sessionStorage</strong> - Stores data until the browser is closed.</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Local Storage Example --&gt;
+localStorage.setItem("username", "JohnDoe");
+console.log(localStorage.getItem("username"));
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 17: JavaScript WebSockets (Real-Time Communication)</h2>
+<p>WebSockets enable two-way real-time communication between the browser and the server.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- WebSocket Example --&gt;
+let socket = new WebSocket("wss://example.com/socket");
+socket.onmessage = function(event) {
+    console.log("Message from server:", event.data);
+};
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 18: JavaScript Service Workers & PWA</h2>
+<p>Service Workers allow web apps to work offline by caching data.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Service Worker Registration --&gt;
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(error => console.log("Registration failed:", error));
+}
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 19: JavaScript Geolocation API (Getting User Location)</h2>
+<p>The <strong>Geolocation API</strong> allows JavaScript to get the user's location.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Get User Location --&gt;
+navigator.geolocation.getCurrentPosition(
+    (position) => {
+        console.log("Latitude: " + position.coords.latitude);
+        console.log("Longitude: " + position.coords.longitude);
+    },
+    (error) => {
+        console.log("Error getting location: " + error.message);
+    }
+);
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 20: JavaScript Date and Time Functions</h2>
+<p>JavaScript can work with dates and times using the <strong>Date</strong> object.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Get Current Date and Time --&gt;
+let now = new Date();
+console.log("Current Date and Time: " + now);
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 21: JavaScript Cookies (Storing User Preferences)</h2>
+<p>Cookies allow JavaScript to store small pieces of data on the user's browser.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Set and Get Cookie --&gt;
+document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2025 12:00:00 UTC";
+console.log("Cookies: " + document.cookie);
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 22: JavaScript Design Patterns</h2>
+<p>Design patterns help organize JavaScript code efficiently.</p>
+<ul>
+    <li><strong>Module Pattern</strong> - Keeps code private and organized.</li>
+    <li><strong>Factory Pattern</strong> - Creates objects efficiently.</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Module Pattern Example --&gt;
+const Counter = (function() {
+    let count = 0;
+    return {
+        increment: function() { count++; },
+        getCount: function() { return count; }
+    };
+})();
+Counter.increment();
+console.log(Counter.getCount());
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 23: JavaScript Performance Optimization</h2>
+<p>Debouncing and throttling improve performance by limiting function execution.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Debounce Example --&gt;
+function debounce(func, delay) {
+    let timeout;
+    return function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(), delay);
+    };
+}
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 24: JavaScript Machine Learning with TensorFlow.js</h2>
+<p>JavaScript can run basic AI models using <strong>TensorFlow.js</strong>.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- TensorFlow.js Example --&gt;
+async function runML() {
+    const model = await tf.loadLayersModel("https://example.com/model.json");
+    console.log("AI Model Loaded!");
+}
+runML();
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 25: JavaScript Proxy & Reflect API</h2>
+<p>The <strong>Proxy API</strong> allows you to customize how objects behave, and <strong>Reflect API</strong> helps manage object operations.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Proxy Example --&gt;
+let user = { name: "John", age: 25 };
+let handler = {
+    get(target, property) {
+        return property in target ? target[property] : "Property not found";
+    }
+};
+let proxyUser = new Proxy(user, handler);
+console.log(proxyUser.name); // John
+console.log(proxyUser.gender); // Property not found
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 26: JavaScript WebRTC (Real-Time Video & Audio Communication)</h2>
+<p><strong>WebRTC</strong> allows real-time audio and video communication in browsers without plugins.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- WebRTC Example --&gt;
+navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+    .then(stream => {
+        document.getElementById("videoElement").srcObject = stream;
+    })
+    .catch(error => console.log("Error accessing camera: " + error));
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 27: JavaScript IndexedDB (Offline Database)</h2>
+<p><strong>IndexedDB</strong> is a client-side database that stores large amounts of data offline.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- IndexedDB Example --&gt;
+let request = indexedDB.open("MyDatabase", 1);
+request.onsuccess = function(event) {
+    console.log("Database opened successfully");
+};
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 28: JavaScript Workers (Running JS in the Background)</h2>
+<p><strong>Web Workers</strong> allow JavaScript to run in the background, preventing page lag.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Web Worker Example --&gt;
+let worker = new Worker("worker.js");
+worker.onmessage = function(event) {
+    console.log("Worker says: " + event.data);
+};
+worker.postMessage("Hello Worker!");
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 29: JavaScript GraphQL API Requests</h2>
+<p><strong>GraphQL</strong> is an alternative to REST APIs that allows more flexible data fetching.</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- GraphQL Fetch Example --&gt;
+fetch("https://api.example.com/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: "{ user { name, age } }" })
+})
+.then(response => response.json())
+.then(data => console.log(data));
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 30: JavaScript Full-Stack Development</h2>
+<p>JavaScript can be used for both <strong>frontend</strong> (React, Vue) and <strong>backend</strong> (Node.js, Express).</p>
+
+<h3>Example:</h3>
+<pre>
+<div class="code-box">
+&lt;!-- Simple Express.js Server --&gt;
+const express = require("express");
+const app = express();
+app.get("/", (req, res) => res.send("Hello World!"));
+app.listen(3000, () => console.log("Server running on port 3000"));
+</div>
+</pre>
+
+<hr>
+
+<h2>Final Notes</h2>
+<ul>
+    <li>JavaScript is essential for modern web development.</li>
+    <li>It allows for interactivity, dynamic content, and advanced programming.</li>
+</ul>
+
+<a href="Index.html" class="button">Back to Homepage</a>
+
+</body>
+</html>

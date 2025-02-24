@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC3 - Setup Computer Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="header-title">ICT'S Future Career Hub</h1>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="dropdown">
+                <a href="Index.html">Home</a>
+                <a href="#about">About Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="coc-title">
+    <h1>COC3: Setup Computer Server</h1>
+</div>
+
+<section class="setup-section">
+    <h2>Set User Account</h2>
+    <h3>In Server Computer</h3>
+    <ol>
+        <li>Open Server Manager > click Add Roles and features > select Active Directory Domain services (ADDS) Check > Add Features</li>
+        <li>Features Select DHCP server > check > Add features Select DNS Server > check > Add Features > Click Next > Next > Install > Restart your Computer</li>
+        <li>Open Server Manager > click Add Roles and features > Click symbol of file and Storage services > click the symbol of file and iscI Services > select file Resource Manager> Check> Add Features Click Next > Next > Install > Restart your Computer</li>
+    </ol>
+
+    <h2>Complete DHCP Configuration</h2>
+    <ol>
+        <li>Click Commit > Click close</li>
+    </ol>
+
+    <h2>Promote this Server to a Domain Controller</h2>
+    <ol>
+        <li>Select a New Forest > Type the Domain (Ex. tvl.org) > Type NetBIOS domain name will appear automatically > click Next > Next > Install > the Computer will automatically restart</li>
+    </ol>
+
+    <h2>Create Folder in Local Disk D:/E of Server</h2>
+    <ol>
+        <li>Computer > Open This PC Locate and open Local Disk D:/E</li>
+        <li>Right click > Select Folder > type the folder name select folder > Right Click > Properties > click sharing > Click Advanced Sharing</li>
+        <li>Click Permission Tab>Select Everyone > click Remove > Click Add > Open Advanced > Click Find Now > double click DOMAIN USER > Click ok</li>
+        <li>Click Caching > check "No file or program from the shared folder are available offline" > click ok > click apply > click ok > copy the Network path > close</li>
+    </ol>
+
+    <h2>Creating Organizational Unit</h2>
+    <ol>
+        <li>Open Server Manager > Click Tools Tab > click Active Directory User and Computers (ADUC)</li>
+        <li>Click Domain > select Domain Controller > Right Click > select New > click Organizational Unit > type name of Organizational Unit (Ex. Ict) > click ok</li>
+    </ol>
+
+    <h2>Creating GPO in Group Policy Management (Folder Redirection)</h2>
+    <ol>
+        <li>Open Server Manager > Select tool tab > click Group Policy Management</li>
+        <li>Click Domain > select Organization unit > Right click > click Create a GPO Open Organizational Unit > select the gpo > right click > click edit</li>
+        <li>Under User Configuration > select Policy > under Policy click windows setting</li>
+        <li>Under windows setting click folder Redirection > select Desktop or Document (right click Properties > Under target tab click BASIC > paste the Network Path you copy early > click Apply > click yes > Under setting uncheck Grant > click Apply > click yes</li>
+    </ol>
+
+    <h2>Creating File Screening</h2>
+    <ol>
+        <li>Open Server Manager > Select tool tab > click File server Resource Manager > Double click File Screen Management</li>
+        <li>Double click file screen > Double click Create file Screen > select Browse > Locate the folder in Local Disk D:/E of Server Computer</li>
+        <li>Click Custom Properties > check Audio or Video files > click OK > select save custom file screen without creating a template > click ok</li>
+    </ol>
+
+    <h2>Creating Domain User</h2>
+    <ol>
+        <li>Open Server Manager > Select tool tab > click File server Resource Manager > click Active Directory User Computers > click Domain controller</li>
+        <li>Click Organization Unit > Right click > click New > Select User > Type the First Name > Type Middle Initial Type The last name > Type the USER LOGON name > Type the password > check Password Never Expired > click Next > click Finish</li>
+    </ol>
+
+    <h2>Creating Domain in Client's Computer</h2>
+    <h3>In Client computer</h3>
+    <ol>
+        <li>In Desktop > select This PC Right Click > click Properties > Open Change setting > under Computer Name Tab > click Change > Delete the name of workgroup</li>
+        <li>Check Domain > Type the Domain name > Type the Username and Password > Click ok > Click ok > click restart</li>
+        <li>Computer will restart > Select Other Account > Type The User log or the logon name > type the Password > enter</li>
+    </ol>
+</section>
+
+<div class="button-container center-buttons">
+    <a href="Index.html" class="button">Back to Homepage</a>
+    <a href="COC2.html" class="button">COC2</a>
+    <a href="COC4.html" class="button">COC4 </a>
+</div>
+</body>
+</html>

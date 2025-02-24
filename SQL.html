@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC1 - Cascading Style Sheets (CSS) Full Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="header-title">ICT'S Future Career Hub</h1>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="dropdown">
+                <a href="Index.html">Home</a>
+                <a href="#about">About Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h1 class="coc-title">Structured Query Language (SQL)</h1>
+
+<h1>Introduction to SQL</h1>
+<p>SQL (Structured Query Language) is used for creating, managing, and querying databases.</p>
+
+<hr>
+
+<h2>Lesson 1: Creating a Database and Tables</h2>
+<p>Use <code>CREATE DATABASE</code> and <code>CREATE TABLE</code> to set up a new database and structure.</p>
+
+<div class="code-box">
+-- Create a database  
+CREATE DATABASE my_database;  
+
+-- Use the database  
+USE my_database;  
+
+-- Create a table  
+CREATE TABLE users (  
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    name VARCHAR(100),  
+    email VARCHAR(100) UNIQUE,  
+    age INT  
+);
+</div>
+
+<hr>
+
+<h2>Lesson 2: Inserting Data into Tables</h2>
+<p>The <code>INSERT INTO</code> statement adds data to a table.</p>
+
+<div class="code-box">
+-- Insert a single user  
+INSERT INTO users (name, email, age) VALUES ('Juan Dela Cruz', 'juan@email.com', 25);  
+
+-- Insert multiple users  
+INSERT INTO users (name, email, age) VALUES  
+    ('Maria Santos', 'maria@email.com', 30),  
+    ('Pedro Reyes', 'pedro@email.com', 22);
+</div>
+
+<hr>
+
+<h2>Lesson 3: Retrieving Data (SELECT Statement)</h2>
+<p>The <code>SELECT</code> statement is used to fetch data from tables.</p>
+
+<div class="code-box">
+-- Get all data from users  
+SELECT * FROM users;  
+
+-- Get specific columns  
+SELECT name, email FROM users;  
+
+-- Get users older than 25  
+SELECT * FROM users WHERE age > 25;
+</div>
+
+<hr>
+
+<h2>Lesson 4: Updating Data</h2>
+<p>The <code>UPDATE</code> statement modifies existing records.</p>
+
+<div class="code-box">
+-- Update a user's age  
+UPDATE users SET age = 26 WHERE name = 'Juan Dela Cruz';
+</div>
+
+<hr>
+
+<h2>Lesson 5: Deleting Data</h2>
+<p>The <code>DELETE</code> statement removes records from a table.</p>
+
+<div class="code-box">
+-- Delete a user  
+DELETE FROM users WHERE name = 'Pedro Reyes';  
+
+-- Delete all users  
+DELETE FROM users;
+</div>
+
+<hr>
+
+<h2>Lesson 6: Sorting and Filtering Data</h2>
+<p>Use <code>ORDER BY</code> to sort data and <code>LIMIT</code> to restrict results.</p>
+
+<div class="code-box">
+-- Sort users by age (ascending)  
+SELECT * FROM users ORDER BY age ASC;  
+
+-- Get the 5 oldest users  
+SELECT * FROM users ORDER BY age DESC LIMIT 5;
+</div>
+
+<hr>
+
+<h2>Lesson 7: Joining Tables (INNER JOIN, LEFT JOIN, RIGHT JOIN)</h2>
+<p>Joins combine data from multiple tables.</p>
+
+<div class="code-box">
+-- Create another table  
+CREATE TABLE orders (  
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    user_id INT,  
+    product VARCHAR(100),  
+    price DECIMAL(10,2),  
+    FOREIGN KEY (user_id) REFERENCES users(id)  
+);  
+
+-- Inner Join Example  
+SELECT users.name, orders.product, orders.price  
+FROM users  
+INNER JOIN orders ON users.id = orders.user_id;
+</div>
+
+<hr>
+
+<h2>Lesson 8: Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)</h2>
+<p>Aggregate functions perform calculations on data.</p>
+
+<div class="code-box">
+-- Count the number of users  
+SELECT COUNT(*) FROM users;  
+
+-- Get the average age  
+SELECT AVG(age) FROM users;  
+
+-- Get the total sales  
+SELECT SUM(price) FROM orders;
+</div>
+<hr>
+
+    <h2>Lesson 9: Creating and Using Views</h2>
+    <p>A <code>VIEW</code> is a virtual table that stores a saved query for easy access.</p>
+
+    <div class="code-box">
+        -- Create a view for active users<br>
+        CREATE VIEW active_users AS<br>
+        SELECT name, email FROM users WHERE age >= 18;<br><br>
+
+        -- Use the view<br>
+        SELECT * FROM active_users;
+    </div>
+
+    <hr>
+
+    <h2>Lesson 10: User Management and Security</h2>
+    <p>Manage users and control database access with <code>CREATE USER</code> and <code>GRANT</code>.</p>
+
+    <div class="code-box">
+        -- Create a new database user<br>
+        CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password123';<br><br>
+
+        -- Grant privileges<br>
+        GRANT ALL PRIVILEGES ON my_database.* TO 'admin'@'localhost';<br><br>
+
+        -- Revoke privileges<br>
+        REVOKE ALL PRIVILEGES ON my_database.* FROM 'admin'@'localhost';
+    </div>
+
+    <hr>
+
+    <h2>Lesson 11: Stored Procedures (Reusable Queries)</h2>
+    <p>A stored procedure is a pre-saved SQL query that can be executed multiple times.</p>
+
+    <div class="code-box">
+        -- Create a stored procedure to get all users<br>
+        DELIMITER // <br>
+        CREATE PROCEDURE GetAllUsers() <br>
+        BEGIN <br>
+            &nbsp;&nbsp;&nbsp;SELECT * FROM users;<br>
+        END // <br>
+        DELIMITER ;<br><br>
+
+        -- Call the stored procedure<br>
+        CALL GetAllUsers();
+    </div>
+
+    <hr>
+
+    <h2>Lesson 12: Triggers (Automatic Execution on Table Events)</h2>
+    <p>A trigger automatically executes a command when a table event occurs.</p>
+
+    <div class="code-box">
+        -- Create a trigger that logs deleted users<br>
+        CREATE TABLE user_logs ( <br>
+            &nbsp;&nbsp;&nbsp;log_id INT AUTO_INCREMENT PRIMARY KEY, <br>
+            &nbsp;&nbsp;&nbsp;user_id INT, <br>
+            &nbsp;&nbsp;&nbsp;action VARCHAR(50), <br>
+            &nbsp;&nbsp;&nbsp;log_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP <br>
+        ); <br><br>
+
+        -- Create trigger before deleting a user <br>
+        DELIMITER // <br>
+        CREATE TRIGGER BeforeUserDelete <br>
+        BEFORE DELETE ON users <br>
+        FOR EACH ROW <br>
+        BEGIN <br>
+            &nbsp;&nbsp;&nbsp;INSERT INTO user_logs (user_id, action) <br>
+            &nbsp;&nbsp;&nbsp;VALUES (OLD.id, 'User Deleted'); <br>
+        END // <br>
+        DELIMITER ;
+    </div>
+
+    <hr>
+
+    <h2>Lesson 13: Transactions (Data Consistency & Rollback)</h2>
+    <p>Transactions allow multiple queries to be executed together with a rollback option if needed.</p>
+
+    <div class="code-box">
+        -- Start a transaction <br>
+        START TRANSACTION; <br><br>
+
+        -- Insert multiple records <br>
+        INSERT INTO users (name, email, age) VALUES ('Ana Cruz', 'ana@email.com', 28); <br>
+        INSERT INTO users (name, email, age) VALUES ('Mark Lopez', 'mark@email.com', 35); <br><br>
+
+        -- Commit changes if everything is successful <br>
+        COMMIT;
+    </div>
+
+    <p>If there is an error, use <code>ROLLBACK</code> to undo changes:</p>
+
+    <div class="code-box">
+        -- Start transaction <br>
+        START TRANSACTION; <br><br>
+
+        -- Insert new data <br>
+        INSERT INTO users (name, email, age) VALUES ('Error User', 'error@email.com', 40); <br><br>
+
+        -- Simulating an error <br>
+        ROLLBACK; -- This will undo the insert above
+    </div>
+
+    <hr>
+
+    <h2>Final Notes</h2>
+    <ul>
+        <li>SQL is the foundation of database management.</li>
+        <li>Aways use <code>WHERE</code> in <code>DELETE</code> and <code>UPDATE</code> to avoid errors.</li>
+        <li>se <code>JOIN</code> to connect multiple tables.</li>
+        <li>Use <code>VIEW</code> to simplify complex queries.</li>
+        <li>ecure your database with proper user management.</li>
+    </ul>
+
+    <hr>
+
+    <div class="button-container">
+        <a href="Index.html" class="button">Back to Homepage</a>
+    </div>
+
+</div>
+
+</body>
+</html>

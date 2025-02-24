@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC1 - Cascading Style Sheets (CSS) Full Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="header-title">ICT'S Future Career Hub</h1>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="dropdown">
+                <a href="Index.html">Home</a>
+                <a href="#about">About Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h1 class="coc-title">Cascading Style Sheets (CSS)</h1>
+
+<h1>Introduction to CSS</h1>
+<p>CSS (Cascading Style Sheets) is used to style and layout HTML elements.</p>
+
+<hr>
+
+<h2>Lesson 1: CSS Syntax and Selectors</h2>
+<p>CSS follows a selector-property-value format.</p>
+
+<pre>
+<div class="code-box">
+selector {
+    property: value;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>selector</code> → The element you want to style.</li>
+    <li><code>property</code> → The style attribute (e.g., color, font-size).</li>
+    <li><code>value</code> → The setting for the property.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 2: Inline, Internal, and External CSS</h2>
+
+<pre>
+<div class="code-box">
+/* External CSS */
+p {
+    color: blue;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li>Inline CSS: Applied directly inside an element.</li>
+    <li>Internal CSS: Inside a &lt;style&gt; tag in HTML.</li>
+    <li>External CSS: Stored in a separate .css file.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 3: Colors and Backgrounds</h2>
+
+<pre>
+<div class="code-box">
+body {
+    background-color: lightblue;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>background-color</code> → Sets the background color.</li>
+    <li><code>background-image</code> → Sets a background image.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 4: Fonts and Text Styling</h2>
+
+<pre>
+<div class="code-box">
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>font-family</code> → Changes the font style.</li>
+    <li><code>text-align</code> → Aligns text left, center, or right.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 5: CSS Box Model</h2>
+
+<pre>
+<div class="code-box">
+div {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>padding</code> → Space inside the border.</li>
+    <li><code>border</code> → Outline of the element.</li>
+    <li><code>margin</code> → Space outside the border.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 6: Positioning and Display</h2>
+
+<pre>
+<div class="code-box">
+.box {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>position</code> → Specifies how an element is positioned.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 7: Flexbox for Layouts</h2>
+
+<pre>
+<div class="code-box">
+.container {
+    display: flex;
+    justify-content: center;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>display: flex;</code> → Enables flexbox layout.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 8: Grid Layout</h2>
+
+<pre>
+<div class="code-box">
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>display: grid;</code> → Enables CSS Grid.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 9: Media Queries</h2>
+
+<pre>
+<div class="code-box">
+@media (max-width: 600px) {
+    body {
+        background-color: yellow;
+    }
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>@media</code> → Applies styles based on screen size.</li>
+</ul>
+
+<hr>
+
+<h2>Lesson 10: CSS Animations and Transitions</h2>
+
+<pre>
+<div class="code-box">
+.box {
+    transition: background 0.5s ease;
+}
+
+.box:hover {
+    background: blue;
+}
+</div>
+</pre>
+
+<h3>Explanation:</h3>
+<ul>
+    <li><code>transition</code> → Creates a smooth effect.</li>
+</ul>
+
+<hr>
+
+<h2>Final Notes</h2>
+<ul>
+    <li>CSS is used for styling web pages.</li>
+    <li>Use Flexbox & Grid for layouts.</li>
+    <li>Use Media Queries for responsive design.</li>
+</ul>
+
+<a href="Index.html" class="button">Back to Homepage</a>
+
+</body>
+</html>

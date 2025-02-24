@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC1 - Structured Query Language (SQL) Full Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="header-title">ICT'S Future Career Hub</h1>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="dropdown">
+                <a href="Index.html">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#coc-section">CSS</a>
+                <a href="#prog-section">Programming</a>
+                <a href="#career-section">Careers</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h1 class="coc-title">Hypertext Preprocessor (PHP)</h1>
+
+<h1>Introduction to PHP</h1>
+<p>PHP (Hypertext Preprocessor) is a server-side scripting language used for creating dynamic web pages.</p>
+
+<hr>
+
+<h2>Lesson 1: PHP Syntax & Variables</h2>
+<p>PHP code is written inside <code>&lt;?php ... ?&gt;</code>. Variables in PHP start with a <code>$</code> sign.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    $name = "John";
+    $age = 25;
+    echo "My name is " . $name;
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 2: Data Types & Operators</h2>
+<p>PHP supports different data types such as strings, integers, floats, and booleans.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    $num1 = 10;
+    $num2 = 5;
+    echo $num1 + $num2; // Output: 15
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 3: PHP Functions</h2>
+<p>Functions help in reusing code.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    function greet($name) {
+        return "Hello, " . $name . "!";
+    }
+    echo greet("Alice");
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 4: Conditional Statements (if, else, switch)</h2>
+<p>Conditional statements help in decision-making.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    $age = 18;
+    if ($age >= 18) {
+        echo "You are an adult.";
+    } else {
+        echo "You are a minor.";
+    }
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 5: Loops (for, while, foreach)</h2>
+<p>Loops allow repeating code multiple times.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    for ($i = 1; $i <= 5; $i++) {
+        echo "Number: " . $i . "&lt;br&gt;";
+    }
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 6: PHP Forms & User Input Handling</h2>
+<p>PHP can handle user input from forms.</p>
+
+<pre>
+<div class="code-box">
+&lt;form method="post"&gt;
+    Name: &lt;input type="text" name="name"&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+
+&lt;?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = $_POST["name"];
+        echo "Hello, " . $name;
+    }
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 7: PHP Superglobals</h2>
+<p>Superglobals like <code>$_GET</code>, <code>$_POST</code>, <code>$_SESSION</code>, and <code>$_COOKIE</code> are used to handle data.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    setcookie("user", "JohnDoe", time() + 3600);
+    echo "Cookie Set: " . $_COOKIE["user"];
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 8: PHP File Handling</h2>
+<p>PHP can read and write files.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    $file = fopen("sample.txt", "r");
+    echo fread($file, filesize("sample.txt"));
+    fclose($file);
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 9: PHP & MySQL (Database CRUD Operations)</h2>
+<p>PHP can connect to MySQL databases.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    $conn = new mysqli("localhost", "root", "", "test_db");
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    echo "Connected successfully";
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 10: PHP Sessions & Cookies</h2>
+<p>Sessions and cookies store user data.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    session_start();
+    $_SESSION["user"] = "Alice";
+    echo "Session user: " . $_SESSION["user"];
+?&gt;
+</div>
+</pre>
+
+<hr>
+
+<h2>Lesson 11: PHP Security</h2>
+<p>Protect PHP applications from SQL injection and XSS attacks.</p>
+
+<pre>
+<div class="code-box">
+&lt;?php
+    $conn = new mysqli("localhost", "root", "", "test_db");
+    $username = mysqli_real_escape_string($conn, $_POST["username"]);
+    $sql = "SELECT * FROM users WHERE username='$username'";
+?&gt;
+</div>
+</pre>
+
+<h2>Final Notes</h2>
+<ul>
+    <li>PHP is widely used for web development.</li>
+    <li>It works with MySQL for database-driven applications.</li>
+    <li>Security practices like input validation are important.</li>
+</ul>
+
+<div class="button-container">
+    <a href="Index.html" class="button">Back to Homepage</a>
+</div>
+
+</body>
+</html>

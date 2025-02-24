@@ -1,0 +1,239 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #f4f4f9;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: #1f1c2c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00b4db;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #1f1c2c;
+    color: #00b4db;
+    border: 1px solid #00b4db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #00b4db;
+    font-size: 0.9rem;
+}
+
+.dropdown a:hover {
+    background-color: #2a2833;
+}
+
+.hamburger-menu:hover .dropdown {
+    display: block;
+}
+
+/* Section Styles */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #00b4db;
+    font-size: 2rem;
+}
+
+h2 {
+    color: white ;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+h3 {
+    color: white ;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* List Styles */
+ol, ul {
+    margin: 20px auto;
+    padding: 0;
+    list-style-position: inside;
+    width: 90%;
+    max-width: 800px;
+}
+
+li {
+    margin-bottom: 10px;
+    background: #3a3745;
+    padding: 12px;
+    border-left: 4px solid #00b4db;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #2a2833;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    color: #f4f4f9;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #00b4db;
+    color: #1f1c2c;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0083b0;
+    transform: scale(1.05);
+}
+
+/* Image Styles */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #00b4db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00b4db;
+}
+.coc-title {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.coc-title h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.navigation-buttons {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.next-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.next-button:hover {
+    background: linear-gradient(135deg, #0083b0, #00b4db);
+    transform: scale(1.05);
+}
+.center-buttons {
+    text-align: center;
+}
+.code-box {
+    background-color: #1e1e1e; /* Dark background for contrast */
+    color: #ffffff; /* White text */
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #00b4db; /* Light blue border */
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 15px 0;
+    display: block;
+}
